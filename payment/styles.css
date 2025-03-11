@@ -1,0 +1,266 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    color: #CCC;
+}
+
+h3 {
+    font-size: 23px;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    top: 0;
+    z-index: 10;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    color: #FBFBFB;
+    background: #495573;
+    width: 100%;
+}
+
+body { 
+    clear: left;
+    background: #7a787a;
+}
+
+.header_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 5%;
+    height: 95%;
+    transition: 0.3s;
+}
+
+.header_title:hover {
+    background: #222;
+    color: #CCC;
+    border-radius: 30px;
+}
+
+.title {
+    height: 325px;
+    overflow: hidden;
+}
+.title_img {
+    width: 100%;
+    transform: translateY(-37%);
+}
+
+/* Fondo degradado grisáceo para la sección de planes */
+.plans {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #B0B0B0, #7a787a, #4c4c4c); /* Agregado un gris más oscuro al final */
+
+    padding: 2rem; /* Espacio dentro de la sección */
+}
+
+.plans div {
+    color: #FFFFFF;
+    background: #495573;
+    border-radius: 30px;
+    text-align: center;
+    aspect-ratio: 1.5;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.plan {
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: scale(1.1);
+}
+
+.plan button {
+    cursor: pointer;
+    transition: 0.4s;
+    border: none;
+    border-radius: 30px;
+    background: #09A6FF;
+    height: 15%;
+    width: 80%;
+}
+
+.plan button:hover {
+    transform: scale(1.1);
+}
+
+.plan h4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+footer {
+    background: #495573;
+    color: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100px; /* Asegura que tenga una altura fija */
+}
+
+footer h2 {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Estilos para la ventana emergente del carrito */
+.carrito-popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+}
+
+.carrito-popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.carrito-popup .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+
+
+.carrito-popup .close:hover,
+.carrito-popup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para el botón del carrito con la imagen en el footer */
+#carritoBtnFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #09A6FF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-top: 1;
+}
+
+#carritoBtnFooter:hover {
+    transform: scale(1.1);
+}
+
+#carritoBtnFooter .carrito-img-footer {
+    width: 30px; /* Tamaño original del carrito */
+    height: 30px; /* Tamaño original del carrito */
+    margin-right: 10px;
+}
+
+
+/* Estilos adicionales para la ventana emergente */
+.carrito-popup-content button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #09A6FF;
+    color: white;
+    transition: 0.3s;
+}
+
+.carrito-popup-content button:hover {
+    background-color: #0777cc;
+}
+
+
+
+
+
+/* Estilos para el botón de eliminar en el carrito */
+.eliminar-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.eliminar-btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    footer {
+        padding-top: 10px; /* Ajustar espacio superior si es necesario */
+        padding-bottom: 10px; /* Puedes agregar algo de espacio en la parte inferior si lo necesitas */
+    }
+
+    .footer_title {
+        font-size: 18px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+
+    #carritoBtnFooter {
+        font-size: 14px; /* Ajusta el tamaño del texto y el botón */
+        padding: 8px 16px;
+    }
+
+    .carrito-img {
+        width: 16px; /* Asegura que la imagen del carrito también se ajuste en pantallas pequeñas */
+        height: 16px;
+    }
+}
